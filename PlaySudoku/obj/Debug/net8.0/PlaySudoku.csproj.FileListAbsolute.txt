@@ -1,0 +1,14 @@
+C:\Users\ivamo\RiderProjects\PlaySudoku\PlaySudoku\obj\Debug\net8.0\PlaySudoku.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\ivamo\RiderProjects\PlaySudoku\PlaySudoku\obj\Debug\net8.0\PlaySudoku.AssemblyInfoInputs.cache
+C:\Users\ivamo\RiderProjects\PlaySudoku\PlaySudoku\obj\Debug\net8.0\PlaySudoku.AssemblyInfo.cs
+C:\Users\ivamo\RiderProjects\PlaySudoku\PlaySudoku\obj\Debug\net8.0\PlaySudoku.csproj.CoreCompileInputs.cache
+C:\Users\ivamo\RiderProjects\PlaySudoku\PlaySudoku\bin\Debug\net8.0\PlaySudoku.exe
+C:\Users\ivamo\RiderProjects\PlaySudoku\PlaySudoku\bin\Debug\net8.0\PlaySudoku.deps.json
+C:\Users\ivamo\RiderProjects\PlaySudoku\PlaySudoku\bin\Debug\net8.0\PlaySudoku.runtimeconfig.json
+C:\Users\ivamo\RiderProjects\PlaySudoku\PlaySudoku\bin\Debug\net8.0\PlaySudoku.dll
+C:\Users\ivamo\RiderProjects\PlaySudoku\PlaySudoku\bin\Debug\net8.0\PlaySudoku.pdb
+C:\Users\ivamo\RiderProjects\PlaySudoku\PlaySudoku\obj\Debug\net8.0\PlaySudoku.dll
+C:\Users\ivamo\RiderProjects\PlaySudoku\PlaySudoku\obj\Debug\net8.0\refint\PlaySudoku.dll
+C:\Users\ivamo\RiderProjects\PlaySudoku\PlaySudoku\obj\Debug\net8.0\PlaySudoku.pdb
+C:\Users\ivamo\RiderProjects\PlaySudoku\PlaySudoku\obj\Debug\net8.0\PlaySudoku.genruntimeconfig.cache
+C:\Users\ivamo\RiderProjects\PlaySudoku\PlaySudoku\obj\Debug\net8.0\ref\PlaySudoku.dll

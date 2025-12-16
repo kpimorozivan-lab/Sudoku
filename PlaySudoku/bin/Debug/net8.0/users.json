@@ -1,0 +1,23 @@
+[
+  {
+    "Id": 1,
+    "Username": "fidloc",
+    "PasswordHash": "WMxhgVGPv7SdqcUNsIzjGqkv7rrsxsRqOoCE6HtQ8Dc=",
+    "Rating": 920,
+    "CreatedAt": "2025-12-16T01:44:01.9124533+02:00"
+  },
+  {
+    "Id": 2,
+    "Username": "PoRog",
+    "PasswordHash": "pT9kN89BPija/dC8eTZMkdN2lOuAXFConXHmpX\u002Bey7M=",
+    "Rating": 1000,
+    "CreatedAt": "2025-12-16T01:44:27.2378538+02:00"
+  },
+  {
+    "Id": 3,
+    "Username": "bubka",
+    "PasswordHash": "gWKI5QX953V6DYGMD2d2cuYZ\u002BTOF/PaUDniap79uA4M=",
+    "Rating": 1000,
+    "CreatedAt": "2025-12-16T01:45:06.4355121+02:00"
+  }
+]
