@@ -43,7 +43,7 @@ namespace PlaySudoku.UI
             Console.WriteLine("0. Exit");
             Console.Write("Choice: ");
 
-            string input = Console.ReadLine();
+            string? input = Console.ReadLine();
             switch (input)
             {
                 case "1": Register(); break;
@@ -57,9 +57,9 @@ namespace PlaySudoku.UI
         {
             Console.Clear();
             Console.Write("User: ");
-            string username = Console.ReadLine();
+            string? username = Console.ReadLine();
             Console.Write("Password: ");
-            string password = Console.ReadLine();
+            string? password = Console.ReadLine();
 
             try
             {
@@ -77,9 +77,9 @@ namespace PlaySudoku.UI
         {
             Console.Clear();
             Console.Write("User: ");
-            string username = Console.ReadLine();
+            string? username = Console.ReadLine();
             Console.Write("Password: ");
-            string password = Console.ReadLine();
+            string? password = Console.ReadLine();
 
             try
             {
@@ -105,7 +105,7 @@ namespace PlaySudoku.UI
             Console.WriteLine("0. Exit the program");
             Console.Write("Choice: ");
 
-            string input = Console.ReadLine();
+            string? input = Console.ReadLine();
             switch (input)
             {
                 case "1": StartGame(); break;
@@ -126,7 +126,7 @@ namespace PlaySudoku.UI
             Console.WriteLine("3. Hard");
             Console.Write("Choice: ");
 
-            string diffInput = Console.ReadLine();
+            string? diffInput = Console.ReadLine();
             Difficulty difficulty = diffInput switch
             {
                 "1" => Difficulty.Easy,
@@ -157,6 +157,7 @@ namespace PlaySudoku.UI
                 Console.WriteLine("  Q - Quit to menu");
 
                 var keyInfo = Console.ReadKey(true);
+                char pressedChar = char.ToUpper(keyInfo.KeyChar);
 
                 switch (keyInfo.Key)
                 {
@@ -236,34 +237,35 @@ namespace PlaySudoku.UI
                         Console.WriteLine($"Rating change: {result.RatingChange}");
                         Pause();
                         return;
-
-                    case ConsoleKey.H:
-                        Console.Clear();
-                        PrintBoardWithCursor(cursorRow, cursorCol);
-                        Console.WriteLine();
-                        _gameService.ShowHint();
-                        Pause();
-                        break;
-
-                    case ConsoleKey.L:
-                        Console.Clear();
-                        Console.WriteLine("Solution:");
-                        PrintSolutionBoard();
-                        Pause();
-                        break;
-
-                    case ConsoleKey.R:
-                        // Restart with new puzzle
-                        if (ConfirmRestart(ref difficulty))
-                        {
-                            _gameService.StartNewGame(_authService.GetCurrentUser(), difficulty);
-                            cursorRow = 0;
-                            cursorCol = 0;
-                        }
-                        break;
-
-                    case ConsoleKey.Q:
-                        return;
+                }
+                
+                if (pressedChar == 'H')
+                {
+                    Console.Clear();
+                    PrintBoardWithCursor(cursorRow, cursorCol);
+                    Console.WriteLine();
+                    _gameService.ShowHint();
+                    Pause();
+                }
+                else if (pressedChar == 'L')
+                {
+                    Console.Clear();
+                    Console.WriteLine("Solution:");
+                    PrintSolutionBoard();
+                    Pause();
+                }
+                else if (pressedChar == 'R')
+                {
+                    if (ConfirmRestart(ref difficulty))
+                    {
+                        _gameService.StartNewGame(_authService.GetCurrentUser(), difficulty);
+                        cursorRow = 0;
+                        cursorCol = 0;
+                    }
+                }
+                else if (pressedChar == 'Q')
+                {
+                    return;
                 }
             }
         }
@@ -331,16 +333,28 @@ namespace PlaySudoku.UI
                     // Set colors
                     if (row == cursorRow && col == cursorCol)
                     {
+                        // Курсор - жовтий фон
                         Console.BackgroundColor = ConsoleColor.Yellow;
-                        Console.ForegroundColor = ConsoleColor.Black;
+                        if (cell.IsFixed)
+                        {
+                            Console.ForegroundColor = ConsoleColor.DarkBlue;
+                        }
+                        else
+                        {
+                            Console.ForegroundColor = ConsoleColor.Black;
+                        }
                     }
                     else if (cell.IsFixed)
                     {
                         Console.ForegroundColor = ConsoleColor.Cyan;
                     }
+                    else if (cell.Value != 0)
+                    {
+                        Console.ForegroundColor = ConsoleColor.Green;
+                    }
                     else
                     {
-                        Console.ForegroundColor = ConsoleColor.White;
+                        Console.ForegroundColor = ConsoleColor.Gray;
                     }
 
                     Console.Write(" " + (cell.Value != 0 ? cell.Value.ToString() : " ") + " ");
@@ -353,8 +367,7 @@ namespace PlaySudoku.UI
                 }
                 
                 Console.WriteLine("║");
-                
-                // Горизонтальні роздільники
+
                 if (row == 2 || row == 5)
                 {
                     Console.WriteLine("╠═══╪═══╪═══╬═══╪═══╪═══╬═══╪═══╪═══╣");

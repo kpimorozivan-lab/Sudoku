@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("PlaySudoku")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+95dce99b6cf3354b95e99ce637233b43a458eaf7")]
 [assembly: System.Reflection.AssemblyProductAttribute("PlaySudoku")]
 [assembly: System.Reflection.AssemblyTitleAttribute("PlaySudoku")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

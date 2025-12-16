@@ -12,3 +12,4 @@ C:\Users\ivamo\RiderProjects\PlaySudoku\PlaySudoku\obj\Debug\net8.0\refint\PlayS
 C:\Users\ivamo\RiderProjects\PlaySudoku\PlaySudoku\obj\Debug\net8.0\PlaySudoku.pdb
 C:\Users\ivamo\RiderProjects\PlaySudoku\PlaySudoku\obj\Debug\net8.0\PlaySudoku.genruntimeconfig.cache
 C:\Users\ivamo\RiderProjects\PlaySudoku\PlaySudoku\obj\Debug\net8.0\ref\PlaySudoku.dll
+C:\Users\ivamo\RiderProjects\PlaySudoku\PlaySudoku\obj\Debug\net8.0\PlaySudoku.sourcelink.json
