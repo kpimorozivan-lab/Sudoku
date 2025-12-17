@@ -56,7 +56,7 @@ namespace PlaySudoku.Data
         public User GetByUsername(string username)
         {
             if (string.IsNullOrWhiteSpace(username))
-                throw new ArgumentException("Ім'я користувача не може бути порожнім", nameof(username));
+                throw new ArgumentException("The username cannot be empty", nameof(username));
 
             lock (_lock)
             {
