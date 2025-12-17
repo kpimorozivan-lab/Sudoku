@@ -330,10 +330,8 @@ namespace PlaySudoku.UI
                 {
                     var cell = board.GetCell(row, col);
                     
-                    // Set colors
                     if (row == cursorRow && col == cursorCol)
                     {
-                        // Курсор - жовтий фон
                         Console.BackgroundColor = ConsoleColor.Yellow;
                         if (cell.IsFixed)
                         {
